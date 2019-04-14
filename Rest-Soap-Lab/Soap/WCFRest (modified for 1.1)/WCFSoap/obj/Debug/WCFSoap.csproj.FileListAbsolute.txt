@@ -1,0 +1,14 @@
+C:\Users\Calvinaud\Desktop\Project\WCFSoap\WCFSoap\bin\Debug\WCFSoap.dll.config
+C:\Users\Calvinaud\Desktop\Project\WCFSoap\WCFSoap\bin\Debug\WCFSoap.dll
+C:\Users\Calvinaud\Desktop\Project\WCFSoap\WCFSoap\bin\Debug\WCFSoap.pdb
+C:\Users\Calvinaud\Desktop\Project\WCFSoap\WCFSoap\obj\Debug\WCFSoap.csprojAssemblyReference.cache
+C:\Users\Calvinaud\Desktop\Project\WCFSoap\WCFSoap\obj\Debug\WCFSoap.csproj.CoreCompileInputs.cache
+C:\Users\Calvinaud\Desktop\Project\WCFSoap\WCFSoap\obj\Debug\WCFSoap.dll
+C:\Users\Calvinaud\Desktop\Project\WCFSoap\WCFSoap\obj\Debug\WCFSoap.pdb
+C:\Users\Calvinaud\Desktop\Project\Rest-Soap-Lab\Soap\WCFRest (modified for 1.1)\WCFSoap\bin\Debug\WCFSoap.dll.config
+C:\Users\Calvinaud\Desktop\Project\Rest-Soap-Lab\Soap\WCFRest (modified for 1.1)\WCFSoap\bin\Debug\WCFSoap.dll
+C:\Users\Calvinaud\Desktop\Project\Rest-Soap-Lab\Soap\WCFRest (modified for 1.1)\WCFSoap\bin\Debug\WCFSoap.pdb
+C:\Users\Calvinaud\Desktop\Project\Rest-Soap-Lab\Soap\WCFRest (modified for 1.1)\WCFSoap\obj\Debug\WCFSoap.csprojAssemblyReference.cache
+C:\Users\Calvinaud\Desktop\Project\Rest-Soap-Lab\Soap\WCFRest (modified for 1.1)\WCFSoap\obj\Debug\WCFSoap.csproj.CoreCompileInputs.cache
+C:\Users\Calvinaud\Desktop\Project\Rest-Soap-Lab\Soap\WCFRest (modified for 1.1)\WCFSoap\obj\Debug\WCFSoap.dll
+C:\Users\Calvinaud\Desktop\Project\Rest-Soap-Lab\Soap\WCFRest (modified for 1.1)\WCFSoap\obj\Debug\WCFSoap.pdb

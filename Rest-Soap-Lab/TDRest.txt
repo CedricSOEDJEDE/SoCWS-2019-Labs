@@ -1,0 +1,21 @@
+Question 1: Projet Créer
+Question 2:
+WsHttpBinding: cette liaison utilise SOAP sur HTTP.
+WebHttpBinding: Liaison qui envoie les informations directement via HTTP (donc sans SOAP).
+Question 3: 
+L'ajout du endpoint permet d'exposer le service
+Question 4:
+Nous avons besoin de WebHttpBinding pour pouvoir ne pas être obliger de passer pas SOAP et on doit exposer le service pour son bon fonctionnement.
+
+Question 5:
+Les méthodes utilisés par Service1.cs appartenant à System.Service.Web sont: WebInvoke, Method, ResponseFormat, WebMessageFormat, UriTemplate
+
+Question 6: On peut directement tester avec un browser web car nous avons créer un endpoint pour accéder au services et puisque le service respecte l'architecture Rest on peut directement envoyer des donnés via l'url
+
+Question 7: On reçoit bien la réponse en Json
+
+Question 8/9:  
+On voit bien la requête HTTP get sur l'url et la réponse étant un json.
+
+Question 10:
+Le framework WCF permet de créer rapidement des services utilisant REST.

@@ -1,0 +1,9 @@
+Quesiton 1: On reçoit bien le message en json
+Question 2: On peut changer le format de réponse en utilisant par exemple l'appConfig générer lors de la création du projet
+
+Question 3: Le service est bien généré
+Question 4: On ajoute le service avec les paramètes correspondant
+Question 5: Le projet ce génére bien et le service se lance bien
+
+Question 6: On créer le client et nous avons biens les résultats sur la console.
+Question 7: Le client fonctionne toujours correctement avec les bindings "basicHttpBinding" et "wsHttpBinding"

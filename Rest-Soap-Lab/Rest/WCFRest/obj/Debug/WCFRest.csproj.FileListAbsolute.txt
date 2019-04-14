@@ -1,0 +1,7 @@
+C:\Users\Calvinaud\Desktop\Project\WCFRest\WCFRest\bin\Debug\WCFRest.dll.config
+C:\Users\Calvinaud\Desktop\Project\WCFRest\WCFRest\bin\Debug\WCFRest.dll
+C:\Users\Calvinaud\Desktop\Project\WCFRest\WCFRest\bin\Debug\WCFRest.pdb
+C:\Users\Calvinaud\Desktop\Project\WCFRest\WCFRest\obj\Debug\WCFRest.csprojAssemblyReference.cache
+C:\Users\Calvinaud\Desktop\Project\WCFRest\WCFRest\obj\Debug\WCFRest.csproj.CoreCompileInputs.cache
+C:\Users\Calvinaud\Desktop\Project\WCFRest\WCFRest\obj\Debug\WCFRest.dll
+C:\Users\Calvinaud\Desktop\Project\WCFRest\WCFRest\obj\Debug\WCFRest.pdb

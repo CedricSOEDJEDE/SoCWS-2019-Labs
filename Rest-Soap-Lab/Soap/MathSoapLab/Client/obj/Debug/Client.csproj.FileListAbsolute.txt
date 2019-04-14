@@ -1,0 +1,7 @@
+C:\Users\Calvinaud\Desktop\Project\Rest-Soap-Lab\Soap\MathSoapLab\Client\bin\Debug\Client.exe.config
+C:\Users\Calvinaud\Desktop\Project\Rest-Soap-Lab\Soap\MathSoapLab\Client\bin\Debug\Client.exe
+C:\Users\Calvinaud\Desktop\Project\Rest-Soap-Lab\Soap\MathSoapLab\Client\bin\Debug\Client.pdb
+C:\Users\Calvinaud\Desktop\Project\Rest-Soap-Lab\Soap\MathSoapLab\Client\obj\Debug\Client.csprojAssemblyReference.cache
+C:\Users\Calvinaud\Desktop\Project\Rest-Soap-Lab\Soap\MathSoapLab\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
+C:\Users\Calvinaud\Desktop\Project\Rest-Soap-Lab\Soap\MathSoapLab\Client\obj\Debug\Client.exe
+C:\Users\Calvinaud\Desktop\Project\Rest-Soap-Lab\Soap\MathSoapLab\Client\obj\Debug\Client.pdb

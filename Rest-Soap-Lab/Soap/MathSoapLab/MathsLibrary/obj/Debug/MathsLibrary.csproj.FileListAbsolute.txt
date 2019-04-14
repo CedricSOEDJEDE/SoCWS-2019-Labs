@@ -1,0 +1,7 @@
+C:\Users\Calvinaud\Desktop\Project\Rest-Soap-Lab\Soap\MathSoapLab\MathsLibrary\bin\Debug\MathsLibrary.dll.config
+C:\Users\Calvinaud\Desktop\Project\Rest-Soap-Lab\Soap\MathSoapLab\MathsLibrary\bin\Debug\MathsLibrary.dll
+C:\Users\Calvinaud\Desktop\Project\Rest-Soap-Lab\Soap\MathSoapLab\MathsLibrary\bin\Debug\MathsLibrary.pdb
+C:\Users\Calvinaud\Desktop\Project\Rest-Soap-Lab\Soap\MathSoapLab\MathsLibrary\obj\Debug\MathsLibrary.csprojAssemblyReference.cache
+C:\Users\Calvinaud\Desktop\Project\Rest-Soap-Lab\Soap\MathSoapLab\MathsLibrary\obj\Debug\MathsLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Calvinaud\Desktop\Project\Rest-Soap-Lab\Soap\MathSoapLab\MathsLibrary\obj\Debug\MathsLibrary.dll
+C:\Users\Calvinaud\Desktop\Project\Rest-Soap-Lab\Soap\MathSoapLab\MathsLibrary\obj\Debug\MathsLibrary.pdb
