@@ -1,0 +1,7 @@
+C:\Users\EDOGAWA\source\repos\TP_REST\bin\Debug\TP_REST.dll.config
+C:\Users\EDOGAWA\source\repos\TP_REST\bin\Debug\TP_REST.dll
+C:\Users\EDOGAWA\source\repos\TP_REST\bin\Debug\TP_REST.pdb
+C:\Users\EDOGAWA\source\repos\TP_REST\obj\Debug\TP_REST.csprojAssemblyReference.cache
+C:\Users\EDOGAWA\source\repos\TP_REST\obj\Debug\TP_REST.csproj.CoreCompileInputs.cache
+C:\Users\EDOGAWA\source\repos\TP_REST\obj\Debug\TP_REST.dll
+C:\Users\EDOGAWA\source\repos\TP_REST\obj\Debug\TP_REST.pdb

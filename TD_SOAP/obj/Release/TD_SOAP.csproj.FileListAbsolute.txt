@@ -1,0 +1,6 @@
+C:\Users\EDOGAWA\source\repos\TD_SOAP\bin\Release\TD_SOAP.dll.config
+C:\Users\EDOGAWA\source\repos\TD_SOAP\bin\Release\TD_SOAP.dll
+C:\Users\EDOGAWA\source\repos\TD_SOAP\bin\Release\TD_SOAP.pdb
+C:\Users\EDOGAWA\source\repos\TD_SOAP\obj\Release\TD_SOAP.csproj.CoreCompileInputs.cache
+C:\Users\EDOGAWA\source\repos\TD_SOAP\obj\Release\TD_SOAP.dll
+C:\Users\EDOGAWA\source\repos\TD_SOAP\obj\Release\TD_SOAP.pdb

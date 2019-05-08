@@ -1,0 +1,6 @@
+E:\si4\server\c#\REST-SOAP-LAB\SoCWS-2019-Labs\IWS-Caching\bin\Debug\IWS-Caching.dll
+E:\si4\server\c#\REST-SOAP-LAB\SoCWS-2019-Labs\IWS-Caching\bin\Debug\IWS-Caching.pdb
+E:\si4\server\c#\REST-SOAP-LAB\SoCWS-2019-Labs\IWS-Caching\obj\Debug\IWS-Caching.csprojAssemblyReference.cache
+E:\si4\server\c#\REST-SOAP-LAB\SoCWS-2019-Labs\IWS-Caching\obj\Debug\IWS-Caching.csproj.CoreCompileInputs.cache
+E:\si4\server\c#\REST-SOAP-LAB\SoCWS-2019-Labs\IWS-Caching\obj\Debug\IWS-Caching.dll
+E:\si4\server\c#\REST-SOAP-LAB\SoCWS-2019-Labs\IWS-Caching\obj\Debug\IWS-Caching.pdb

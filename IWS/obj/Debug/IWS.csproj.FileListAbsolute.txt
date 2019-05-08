@@ -9,3 +9,16 @@ E:\si4\server\c#\REST-SOAP-LAB\IWS\obj\Debug\IWS.csproj.CoreCompileInputs.cache
 E:\si4\server\c#\REST-SOAP-LAB\IWS\obj\Debug\IWS.csproj.CopyComplete
 E:\si4\server\c#\REST-SOAP-LAB\IWS\obj\Debug\IWS.dll
 E:\si4\server\c#\REST-SOAP-LAB\IWS\obj\Debug\IWS.pdb
+E:\si4\server\c#\REST-SOAP-LAB\SoCWS-2019-Labs\IWS\bin\Debug\IWS.dll.config
+E:\si4\server\c#\REST-SOAP-LAB\SoCWS-2019-Labs\IWS\bin\Debug\IWS.dll
+E:\si4\server\c#\REST-SOAP-LAB\SoCWS-2019-Labs\IWS\bin\Debug\IWS.pdb
+E:\si4\server\c#\REST-SOAP-LAB\SoCWS-2019-Labs\IWS\bin\Debug\IWS-Caching.dll
+E:\si4\server\c#\REST-SOAP-LAB\SoCWS-2019-Labs\IWS\bin\Debug\Newtonsoft.Json.dll
+E:\si4\server\c#\REST-SOAP-LAB\SoCWS-2019-Labs\IWS\bin\Debug\IWS-Caching.pdb
+E:\si4\server\c#\REST-SOAP-LAB\SoCWS-2019-Labs\IWS\bin\Debug\Newtonsoft.Json.pdb
+E:\si4\server\c#\REST-SOAP-LAB\SoCWS-2019-Labs\IWS\bin\Debug\Newtonsoft.Json.xml
+E:\si4\server\c#\REST-SOAP-LAB\SoCWS-2019-Labs\IWS\obj\Debug\IWS.csprojAssemblyReference.cache
+E:\si4\server\c#\REST-SOAP-LAB\SoCWS-2019-Labs\IWS\obj\Debug\IWS.csproj.CoreCompileInputs.cache
+E:\si4\server\c#\REST-SOAP-LAB\SoCWS-2019-Labs\IWS\obj\Debug\IWS.csproj.CopyComplete
+E:\si4\server\c#\REST-SOAP-LAB\SoCWS-2019-Labs\IWS\obj\Debug\IWS.dll
+E:\si4\server\c#\REST-SOAP-LAB\SoCWS-2019-Labs\IWS\obj\Debug\IWS.pdb
