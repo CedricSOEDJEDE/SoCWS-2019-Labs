@@ -126,7 +126,7 @@ namespace IWS
             
         }
 
-        public List<string> getLogs()
+        public List<List<string>> getLogs()
         {
             return monitor.getMonitor();
         }
