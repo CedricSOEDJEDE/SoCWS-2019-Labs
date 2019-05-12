@@ -12,22 +12,29 @@ namespace IWS
     public class ClientOperation : IClientOperation
     {
 
-        private Caching caching;
+        private ICaching caching;
 
-        public ClientOperation()
+        private ICaching getCache()
         {
-            getCache();
-        }
-
-        private void getCache()
-        {
-            caching = Binary.ReadFromBinaryFile<Caching>(System.AppDomain.CurrentDomain.BaseDirectory + "/cache") == null ? new Caching() :
+            Caching c;
+            c = Binary.ReadFromBinaryFile<Caching>(System.AppDomain.CurrentDomain.BaseDirectory + "/cache") == null ? new Caching() :
                 Binary.ReadFromBinaryFile<Caching>(System.AppDomain.CurrentDomain.BaseDirectory + "/cache");
-            this.caching.setLifeTime(new TimeSpan(0, 0, 30));
+            c.setLifeTime(new TimeSpan(0, 0, 30));
+            return c;
         }
 
-        public int getAvailableBikes(string contract, string station)
+        private ICaching getCacheV2()
         {
+            return new CachingV2(1);
+        }
+
+        public int getAvailableBikes(string contract, string station, string user)
+        {
+            if (user == "admin")
+                caching = getCache();
+            else
+                caching = getCacheV2();
+
             int number = caching.getAvailableBike(contract, station);
             if (number == -1)
             {
@@ -48,8 +55,13 @@ namespace IWS
             
         }
 
-        public List<string> getContracts()
+        public List<string> getContracts(string user)
         {
+            if (user == "admin")
+                caching = getCache();
+            else
+                caching = getCacheV2();
+
             List<string> gotContract = caching.getContract();
             if (gotContract == null)
             {
@@ -74,8 +86,13 @@ namespace IWS
                 
         }
 
-        public List<string>[] getStations(string contract)
+        public List<string>[] getStations(string contract, string user)
         {
+            if (user == "admin")
+                caching = getCache();
+            else
+                caching = getCacheV2();
+
             List<string>[] gotStations = caching.getStations(contract);
             if (gotStations == null)
             {

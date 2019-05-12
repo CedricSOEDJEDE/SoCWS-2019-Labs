@@ -11,6 +11,7 @@ namespace IWS_Client
     {
         static void Main(string[] args)
         {
+            string user = "user";
             int res = 0;
             do
             {
@@ -33,20 +34,20 @@ namespace IWS_Client
                 switch (res)
                 {
                     case 1:
-                        show(client.getContracts());
+                        show(client.getContracts(user));
                         Console.WriteLine("Appuyer sur une touche pour continuer");
                         Console.ReadKey();
                         break;
                     case 2:
-                        show(client.getStations(showVillesWithSelection(client.getContracts()))[0]);
+                        show(client.getStations(showVillesWithSelection(client.getContracts(user)), user)[0]);
                         Console.WriteLine("Appuyer sur une touche pour continuer");
                         Console.ReadKey();
                         break;
                     case 3:
-                        string ville = showVillesWithSelection(client.getContracts());
-                        List<string>[] stations = client.getStations(ville);
+                        string ville = showVillesWithSelection(client.getContracts(user));
+                        List<string>[] stations = client.getStations(ville, user);
                         string station = stations[1][showStations(stations[0])];
-                        Console.WriteLine("Il y a " + client.getAvailableBikes(ville, station) + " vélos disponible");
+                        Console.WriteLine("Il y a " + client.getAvailableBikes(ville, station, user) + " vélos disponible");
                         Console.WriteLine("Appuyer sur une touche pour continuer");
                         Console.ReadKey();
                         break;

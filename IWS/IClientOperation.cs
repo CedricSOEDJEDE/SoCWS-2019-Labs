@@ -11,13 +11,13 @@ namespace IWS
     public interface IClientOperation
     {
         [OperationContract]
-        List<String> getContracts();
+        List<String> getContracts(string user);
 
         [OperationContract]
-        List<String>[] getStations(string contract);
+        List<String>[] getStations(string contract, string user);
 
         [OperationContract]
-        int getAvailableBikes(string contract, string station);
+        int getAvailableBikes(string contract, string station, string user);
 
         [OperationContract]
         string communicationTest();
