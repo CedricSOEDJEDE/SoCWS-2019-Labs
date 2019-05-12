@@ -7,12 +7,14 @@ using System.Net;
 using Newtonsoft.Json;
 using System.IO;
 using IWS_Caching;
+using IWS_Monitoring;
 namespace IWS
 {
     public class ClientOperation : IClientOperation
     {
 
         private ICaching caching;
+        private Monitor monitor = new Monitor();
 
         private ICaching getCache()
         {
@@ -30,6 +32,8 @@ namespace IWS
 
         public int getAvailableBikes(string contract, string station, string user)
         {
+            monitor.save("getAvailableBikes", new List<string>() { contract, station });
+
             if (user == "admin")
                 caching = getCache();
             else
@@ -57,6 +61,7 @@ namespace IWS
 
         public List<string> getContracts(string user)
         {
+            monitor.save("getContracts", new List<string>());
             if (user == "admin")
                 caching = getCache();
             else
@@ -88,6 +93,7 @@ namespace IWS
 
         public List<string>[] getStations(string contract, string user)
         {
+            monitor.save("getStations", new List<string>() { contract });
             if (user == "admin")
                 caching = getCache();
             else
@@ -118,6 +124,11 @@ namespace IWS
                 return gotStations;
             }
             
+        }
+
+        public List<string> getLogs()
+        {
+            return monitor.getMonitor();
         }
 
         public string communicationTest()

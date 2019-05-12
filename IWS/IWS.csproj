@@ -60,6 +60,13 @@
       <Project>{5895f272-690d-45bb-b33b-4a2c293cbce7}</Project>
       <Name>IWS-Caching</Name>
     </ProjectReference>
+    <ProjectReference Include="..\IWS-Monitoring\IWS-Monitoring.csproj">
+      <Project>{f9c173c1-ae8d-44db-b21c-1b23fbbc99e8}</Project>
+      <Name>IWS-Monitoring</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

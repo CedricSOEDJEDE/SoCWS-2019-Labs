@@ -28,3 +28,5 @@ E:\si4\server\c#\REST-SOAP-LAB\SoCWS-2019-Labs\IWS-Client\obj\Debug\IWS-Client.c
 E:\si4\server\c#\REST-SOAP-LAB\SoCWS-2019-Labs\IWS-Client\obj\Debug\IWS-Client.csproj.CopyComplete
 E:\si4\server\c#\REST-SOAP-LAB\SoCWS-2019-Labs\IWS-Client\obj\Debug\IWS-Client.exe
 E:\si4\server\c#\REST-SOAP-LAB\SoCWS-2019-Labs\IWS-Client\obj\Debug\IWS-Client.pdb
+E:\si4\server\c#\REST-SOAP-LAB\SoCWS-2019-Labs\IWS-Client\bin\Debug\IWS-Monitoring.dll
+E:\si4\server\c#\REST-SOAP-LAB\SoCWS-2019-Labs\IWS-Client\bin\Debug\IWS-Monitoring.pdb

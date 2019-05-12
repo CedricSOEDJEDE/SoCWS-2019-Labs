@@ -22,6 +22,7 @@ namespace IWS_Client
                 Console.WriteLine("\t\t1 - Voir les villes disponibles");
                 Console.WriteLine("\t\t2 - Voir les stations pour une ville donnée");
                 Console.WriteLine("\t\t3 - Voir le nombre de vélo disponible");
+                Console.WriteLine("\t\t4 - Voir les logs");
                 Console.WriteLine("\t\t0 - Exit");
                 Console.WriteLine("Ne pas réduire la fenêtre");
                 IClientOperation client = new ClientOperation();
@@ -49,6 +50,10 @@ namespace IWS_Client
                         string station = stations[1][showStations(stations[0])];
                         Console.WriteLine("Il y a " + client.getAvailableBikes(ville, station, user) + " vélos disponible");
                         Console.WriteLine("Appuyer sur une touche pour continuer");
+                        Console.ReadKey();
+                        break;
+                    case 4:
+                        Console.WriteLine(client.getLogs().Count);
                         Console.ReadKey();
                         break;
                 }

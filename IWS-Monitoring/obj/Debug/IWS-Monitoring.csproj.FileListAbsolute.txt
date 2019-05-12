@@ -1,0 +1,6 @@
+E:\si4\server\c#\REST-SOAP-LAB\SoCWS-2019-Labs\IWS-Monitoring\bin\Debug\IWS-Monitoring.dll
+E:\si4\server\c#\REST-SOAP-LAB\SoCWS-2019-Labs\IWS-Monitoring\bin\Debug\IWS-Monitoring.pdb
+E:\si4\server\c#\REST-SOAP-LAB\SoCWS-2019-Labs\IWS-Monitoring\obj\Debug\IWS-Monitoring.csprojAssemblyReference.cache
+E:\si4\server\c#\REST-SOAP-LAB\SoCWS-2019-Labs\IWS-Monitoring\obj\Debug\IWS-Monitoring.csproj.CoreCompileInputs.cache
+E:\si4\server\c#\REST-SOAP-LAB\SoCWS-2019-Labs\IWS-Monitoring\obj\Debug\IWS-Monitoring.dll
+E:\si4\server\c#\REST-SOAP-LAB\SoCWS-2019-Labs\IWS-Monitoring\obj\Debug\IWS-Monitoring.pdb
