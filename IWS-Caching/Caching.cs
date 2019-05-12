@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace IWS_Caching
 {
     [Serializable]
-    public class Caching
+    public class Caching : ICaching
     {
         private DateTime contractLastUpdate;
         private List<string> contracts;

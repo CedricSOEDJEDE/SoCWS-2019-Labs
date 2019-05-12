@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IWS-Client", "IWS-Client\IW
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IWS-Caching", "IWS-Caching\IWS-Caching.csproj", "{5895F272-690D-45BB-B33B-4A2C293CBCE7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IWS-Monitoring", "IWS-Monitoring\IWS-Monitoring.csproj", "{F9C173C1-AE8D-44DB-B21C-1B23FBBC99E8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{5895F272-690D-45BB-B33B-4A2C293CBCE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5895F272-690D-45BB-B33B-4A2C293CBCE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5895F272-690D-45BB-B33B-4A2C293CBCE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9C173C1-AE8D-44DB-B21C-1B23FBBC99E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9C173C1-AE8D-44DB-B21C-1B23FBBC99E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9C173C1-AE8D-44DB-B21C-1B23FBBC99E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9C173C1-AE8D-44DB-B21C-1B23FBBC99E8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
