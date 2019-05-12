@@ -32,7 +32,8 @@
     "stream": "0.0.2",
     "tslib": "^1.9.0",
     "uuid": "^3.3.2",
-    "zone.js": "~0.8.26"
+    "zone.js": "~0.8.26",
+    "angularfire2": "latest"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.13.0",

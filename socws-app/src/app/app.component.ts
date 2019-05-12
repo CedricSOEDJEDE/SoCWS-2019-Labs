@@ -14,45 +14,14 @@ export class AppComponent {
   currentRoute: string;
   isLogged = false;
 
-  constructor(private veloService: VeloService) {
+  constructor(private veloService: VeloService, private userService: UserService) {
     this.currentRoute = '';
   }
 
   async ngOnInit() {
-    // this.isLogged = (this.connectedUser !== null && this.connectedUser !== undefined);
-
-    /*this.router.events.subscribe(event => {
-      if (event instanceof RoutesRecognized) {
-        this.currentRoute = event.url;
-      }
-    });*/
-
-    /*this.connectedUser = await this.userService.getLoggedUser();
+    this.connectedUser = this.userService.getLoggedUser();
+    console.log(this.connectedUser);
     this.isLogged = (this.connectedUser !== null && this.connectedUser !== undefined);
-    (await this.userService.streamLoggedUser()).subscribe(user => {
-      this.connectedUser = user;
-      this.isLogged = (this.connectedUser !== null && this.connectedUser !== undefined);
-      if (user === null && this.connectedUser !== null) {
-        // Disconnect from user
-        this.router.navigate(['/']);
-      }
-    });
-
-    //  if(this.isLogged) {
-    // this.notificationService.getPermission(this.connectedUser);
-    // }
-
-    // Open popup to inform of cookie using
-    if (localStorage.getItem('knowCookies') !== 'true') {
-      setTimeout(() => {
-        // Must open only if the user never said ok
-        this.popupService.openCookiePopup();
-      }, 1500);
-    }*/
-  }
-
-  test() {
-    this.veloService.getContracts();
   }
 
   disconnect() {
