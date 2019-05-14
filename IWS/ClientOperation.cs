@@ -110,12 +110,17 @@ namespace IWS
                 dynamic json = JsonConvert.DeserializeObject(responseFromServer);
                 List<String> stations = new List<string>();
                 List<String> numbers = new List<string>();
+                List<String> numberofbikes = new List<string>();
+                List<String> numberofstands = new List<string>();
+
                 foreach (var prop in json)
                 {
                     stations.Add(prop.name.ToString() /*+ ". Adresse :" + prop.address.ToString()*/);
                     numbers.Add(prop.number.ToString());
+                    numberofbikes.Add(prop.available_bikes.ToString());
+                    numberofstands.Add(prop.bike_stands.ToString());
                 }
-                List<string>[] retour = { stations, numbers };
+                List<string>[] retour = { stations, numbers, numberofbikes, numberofstands};
                 caching.updateStations(contract, retour);
                 return retour;
             }else

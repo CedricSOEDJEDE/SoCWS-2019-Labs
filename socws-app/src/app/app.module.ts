@@ -14,7 +14,9 @@ import {AngularFireAuth, AngularFireAuthModule} from 'angularfire2/auth';
 import {AngularFireModule} from 'angularfire2';
 import {environment} from '../environments/environment';
 import { RegisterComponent } from './components/register/register.component';
-import { VelibComponent } from './components/velib/velib.component';
+import { VelibComponent } from './components/velib-components/velib/velib.component';
+import { VelibCitiesComponent } from './components/velib-components/velib-cities/velib-cities.component';
+import { VelibStationComponent } from './components/velib-components/velib-station/velib-station.component';
 
 
 @NgModule({
@@ -22,7 +24,9 @@ import { VelibComponent } from './components/velib/velib.component';
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    VelibComponent
+    VelibComponent,
+    VelibCitiesComponent,
+    VelibStationComponent
   ],
   imports: [
     FormsModule,

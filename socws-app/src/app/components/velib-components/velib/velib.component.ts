@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {VeloService} from "../../services/velo.service";
+import {VeloService} from "../../../services/velo.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-velib',
@@ -8,15 +9,18 @@ import {VeloService} from "../../services/velo.service";
 })
 export class VelibComponent implements OnInit {
 
-
   citiesList: string[];
 
-  constructor(private veloService: VeloService) {
+  constructor(private veloService: VeloService, private router: Router) {
     this.citiesList = ["Loading"];
   }
 
   ngOnInit() {
      this.veloService.getCities().then(res => this.citiesList = res);
+  }
+
+  goToCity(city: string){
+    this.router.navigate(['/cities',city]);
   }
 
   reloadCities(){

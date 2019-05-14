@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import {Client, ISoapMethodResponse, NgxSoapService} from "ngx-soap";
+import {Station} from "../models/station";
 
 @Injectable()
 export class VeloService {
@@ -27,8 +28,30 @@ export class VeloService {
     };
     const client = await this.client;
     return (await ((<any>client).getContracts(body).toPromise())).result.getContractsResult.string;
-    //(<any>this.client).getContracts(body).subscribe((res: ISoapMethodResponse) => this.message = res.result.getContractsResult);
-    //return this.message;
   }
+
+  public async getStation(city : string): Promise<Station[]> {
+    const body = {
+      contract: city,
+      user: "user"
+    };
+    const client = await this.client;
+    console.log();
+    const stationsResponse = (await ((<any>client).getStations(body).toPromise())).result.getStationsResult.ArrayOfstring;
+    const listName = stationsResponse[0].string;
+    const listId = stationsResponse[1].string;
+    const listNumberofBike = stationsResponse[2].string;
+    const listNumberofStand = stationsResponse[3].string;
+
+    console.log(stationsResponse);
+
+    let listStation: Station[] = [];
+
+    for (let i = 0; i < listName.length; i++) {
+      listStation[i] = new Station(listId[i], listName[i], listNumberofBike[i], listNumberofStand[i]);
+    }
+
+    return Promise.resolve(listStation);
+   }
 
 }
