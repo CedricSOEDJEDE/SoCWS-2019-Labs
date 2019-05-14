@@ -1,0 +1,8 @@
+{
+  "/Velib/*": {
+    "target": "http://localhost:8732/IWS/JCDECAUX_SOAP/",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": {"^/Velib/*" : ""}
+  }
+}

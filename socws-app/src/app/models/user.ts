@@ -79,6 +79,11 @@ export class User {
     return new User(doc.firstName, doc.lastName, doc.mail, doc.username, '');
   }
 
+  supplyWithFirebaseUser(fUser: firebase.User): void {
+    this.userId = fUser.uid;
+    this.mail = fUser.email;
+  }
+
   /*
   static hasValidMail(user: User): boolean {
     return user.mail.includes('@', 0);

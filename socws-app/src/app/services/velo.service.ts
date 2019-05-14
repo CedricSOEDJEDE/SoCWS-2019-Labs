@@ -3,13 +3,32 @@ import {Client, ISoapMethodResponse, NgxSoapService} from "ngx-soap";
 
 @Injectable()
 export class VeloService {
-  client: Client;
+
+  private readonly client: Promise<Client>;
+  message;
 
   constructor(private soap: NgxSoapService) {
-    this.soap.createClient('http://localhost:8732/IWS/JCDECAUX_SOAP/?wsdl').then(client => this.client = client).catch(er => console.log("Error"));
+    this.client = this.soap.createClient('/Velib/?singleWsdl', {}, '/Velib/');
+  }
+/*
+  public async getCities() {
+    const client = await this.client;
+    const body = {
+      user: "admin"
+    };
+    const stations_data = (await ((<any>this.client).getContracts(body).toPromise()));
+    console.log(stations_data.message);
+    return stations_data;
+  }*/
+
+  public async getCities(): Promise<string[]> {
+    const body = {
+      user: "user"
+    };
+    const client = await this.client;
+    return (await ((<any>client).getContracts(body).toPromise())).result.getContractsResult.string;
+    //(<any>this.client).getContracts(body).subscribe((res: ISoapMethodResponse) => this.message = res.result.getContractsResult);
+    //return this.message;
   }
 
-  getContracts() {
-      (this.client as any).getContracts().subscribe((res: ISoapMethodResponse) => console.log("result"));
-  }
 }

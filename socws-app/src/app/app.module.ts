@@ -14,13 +14,15 @@ import {AngularFireAuth, AngularFireAuthModule} from 'angularfire2/auth';
 import {AngularFireModule} from 'angularfire2';
 import {environment} from '../environments/environment';
 import { RegisterComponent } from './components/register/register.component';
+import { VelibComponent } from './components/velib/velib.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    VelibComponent
   ],
   imports: [
     FormsModule,
