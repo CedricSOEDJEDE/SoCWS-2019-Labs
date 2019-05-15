@@ -16,6 +16,10 @@ namespace IWS_Caching
 
         void updateAvailableBike(string contract, string station, int number);
 
+        void updateStationInformation(string contract, string station, string[] information);
+
+        string[] getStationInformation(string contract, string station);
+
         int getAvailableBike(string contract, string station);
 
         List<string>[] getStations(string c);

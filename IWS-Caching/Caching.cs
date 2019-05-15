@@ -16,6 +16,8 @@ namespace IWS_Caching
 
         private IDictionary<string, Tuple<DateTime, int>> availablesBikes;
 
+        private IDictionary<string, Tuple<DateTime, string[]>> stationInformation;
+
         private TimeSpan lifeTime;
 
         public Caching()
@@ -23,6 +25,7 @@ namespace IWS_Caching
             contracts = new List<string>();
             stations = new Dictionary<string, Tuple<DateTime, List<string>[]>>();
             availablesBikes = new Dictionary<string, Tuple<DateTime, int>>();
+            stationInformation = new Dictionary<string, Tuple<DateTime, string[]>>();
             lifeTime = new TimeSpan(0, 10, 0);
         }
 
@@ -63,6 +66,12 @@ namespace IWS_Caching
             Binary.WriteToBinaryFile<Caching>(System.AppDomain.CurrentDomain.BaseDirectory + "/cache", this);
         }
 
+        public void updateStationInformation(string contract, string station, string[] information)
+        {
+            stationInformation.Add(contract + " " + station, new Tuple<DateTime, string[]>(DateTime.Now, information));
+            Binary.WriteToBinaryFile<Caching>(System.AppDomain.CurrentDomain.BaseDirectory + "/cache", this);
+        }
+
         public int getAvailableBike(string contract, string station)
         {
             Tuple<DateTime, int> number;
@@ -79,6 +88,25 @@ namespace IWS_Caching
                 availablesBikes.Remove(contract + " " + station);
             }
             return -1;
+        }
+
+        public string[] getStationInformation(string contract, string station)
+        {
+            Tuple<DateTime, string[]> information;
+            if (!stationInformation.TryGetValue(contract + " " + station, out information))
+            {
+                return null;
+            }
+
+            if (DateTime.Now - information.Item1 < lifeTime)
+            {
+                return information.Item2;
+            }
+            else
+            {
+                stationInformation.Remove(contract + " " + station);
+            }
+            return null;
         }
 
         public List<string>[] getStations(string c)

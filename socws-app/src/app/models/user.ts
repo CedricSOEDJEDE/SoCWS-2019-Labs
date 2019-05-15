@@ -6,6 +6,7 @@ export class User {
   private _mail: string;
   private _password: string;
   private _username: string;
+  private _role: string;
 
   /**
    * @param firstName
@@ -25,6 +26,15 @@ export class User {
     this._username = username;
     this._userId = userId;
     this._password = '';
+    this._role = 'user';
+  }
+
+  get role(): string{
+    return this._role;
+  }
+
+  set role(value: string){
+    this._role = value;
   }
 
   get username(): string{

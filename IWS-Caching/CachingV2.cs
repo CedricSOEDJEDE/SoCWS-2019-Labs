@@ -51,12 +51,27 @@ namespace IWS_Caching
             cache.Add("availableBike" + contract + station, number, cacheItemPolicy);
         }
 
+        public void updateStationInformation(string contract, string station, string[] information)
+        {
+            CacheItemPolicy cacheItemPolicy = new CacheItemPolicy();
+            cacheItemPolicy.AbsoluteExpiration = DateTime.Now.AddMinutes(minutes);
+            cache.Add("stationInformation" + contract + station, information, cacheItemPolicy);
+        }
+
         public int getAvailableBike(string contract, string station)
         {
             if (cache.Contains("availableBike" + contract + station))
                 return (int)cache.Get("availableBike" + contract + station);
 
             return -1;
+        }
+
+        public string[] getStationInformation(string contract, string station)
+        {
+            if (cache.Contains("stationInformation" + contract + station))
+                return (string[])cache.Get("stationInformation" + contract + station);
+
+            return null;
         }
 
         public List<string>[] getStations(string c)
