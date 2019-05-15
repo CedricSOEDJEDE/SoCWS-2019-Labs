@@ -59,6 +59,36 @@ namespace IWS
             
         }
 
+        public String[] getStationInformation(string contract, string station, string user)
+        {
+            monitor.save("getAvailableBikes", new List<string>() { contract, station });
+
+            if (user == "admin")
+                caching = getCache();
+            else
+                caching = getCacheV2();
+
+            string[] information = caching.getStationInformation(contract, station);
+            if (information == null)
+            {
+                WebRequest request = WebRequest.Create("https://api.jcdecaux.com/vls/v1/stations/" + station + "?contract=" + contract + "&apiKey=c5b41b9ed475fe8eace9aaffcde620fa313f37d6");
+                WebResponse response = request.GetResponse();
+                Stream dataStream = response.GetResponseStream();
+                StreamReader reader = new StreamReader(dataStream);
+                string responseFromServer = reader.ReadToEnd();
+                dynamic json = JsonConvert.DeserializeObject(responseFromServer);
+                String[] info = { json.name.ToString(), json.number.ToString(), json.available_bikes.ToString(), json.bike_stands.ToString() };
+                caching.updateStationInformation(contract, station, info);
+                return info;
+            }
+            else
+            {
+                Console.WriteLine("From Cache");
+                return information;
+            }
+
+        }
+
         public List<string> getContracts(string user)
         {
             monitor.save("getContracts", new List<string>());
@@ -120,7 +150,7 @@ namespace IWS
                     numberofbikes.Add(prop.available_bikes.ToString());
                     numberofstands.Add(prop.bike_stands.ToString());
                 }
-                List<string>[] retour = { stations, numbers, numberofbikes, numberofstands};
+                List<string>[] retour = { stations, numbers, numberofbikes, numberofstands };
                 caching.updateStations(contract, retour);
                 return retour;
             }else

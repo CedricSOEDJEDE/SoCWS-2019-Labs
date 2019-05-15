@@ -1,5 +1,8 @@
 <p>
-  Vous êtes sur la page de la station de {{station}} à {{city}}
+  Vous êtes sur la page de la station de <kbd>{{station.name}}</kbd> à <kbd>{{city}}</kbd>
+</p>
+<p>
+  Il y a <kbd>{{station.numberOfBike}}</kbd> vélo de libre sur <kbd>{{station.numberofStand}}</kbd> emplacement
 </p>
 <button (click)="reloadStation()" type="button" class="btn btn-primary">Refresh</button>
 <button (click)="return()" type="button" class="btn btn-secondary">Return</button>

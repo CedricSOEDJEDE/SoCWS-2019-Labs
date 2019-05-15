@@ -1,14 +1,18 @@
 import { Injectable } from '@angular/core';
 import {Client, ISoapMethodResponse, NgxSoapService} from "ngx-soap";
 import {Station} from "../models/station";
+import {UserService} from "./user.service";
+import {User} from "../models/user";
 
 @Injectable()
 export class VeloService {
 
   private readonly client: Promise<Client>;
   message;
+  role: string;
 
-  constructor(private soap: NgxSoapService) {
+
+  constructor(private soap: NgxSoapService, private userService: UserService) {
     this.client = this.soap.createClient('/Velib/?singleWsdl', {}, '/Velib/');
   }
 /*
@@ -22,9 +26,19 @@ export class VeloService {
     return stations_data;
   }*/
 
+  private async getLevelUser() {
+
+    const connectedUser = await this.userService.getLoggedUser();
+    if (connectedUser == null) {
+      this.role = "user";
+    }
+    this.role = connectedUser.role;
+  }
+
   public async getCities(): Promise<string[]> {
+
     const body = {
-      user: "user"
+      user: this.role
     };
     const client = await this.client;
     return (await ((<any>client).getContracts(body).toPromise())).result.getContractsResult.string;
@@ -33,7 +47,7 @@ export class VeloService {
   public async getStation(city : string): Promise<Station[]> {
     const body = {
       contract: city,
-      user: "user"
+      user: this.role
     };
     const client = await this.client;
     console.log();
@@ -53,5 +67,19 @@ export class VeloService {
 
     return Promise.resolve(listStation);
    }
+
+  public async getStationInformation(city : string, station: string): Promise<Station> {
+    const body = {
+      contract: city,
+      station: station,
+      user: this.role
+    };
+    const client = await this.client;
+    const stationsResponse = (await ((<any>client).getStationInformation(body).toPromise())).result.getStationInformationResult.string;
+
+    let stationresp = new Station(stationsResponse[1], stationsResponse[0], stationsResponse[2], stationsResponse[3]);
+
+    return Promise.resolve(stationresp);
+  }
 
 }

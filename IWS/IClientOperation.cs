@@ -23,6 +23,9 @@ namespace IWS
         string communicationTest();
 
         [OperationContract]
+        String[] getStationInformation(string contract, string station, string user);
+
+        [OperationContract]
         List<List<string>> getLogs();
     }
 }

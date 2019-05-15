@@ -31,7 +31,8 @@ export class UserService {
           mail: user.mail,
           firstName: user.firstName,
           lastName: user.lastName,
-          username: user.username
+          username: user.username,
+          role: user.role
         });
         return res;
       });

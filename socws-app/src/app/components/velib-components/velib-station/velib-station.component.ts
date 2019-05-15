@@ -21,12 +21,13 @@ export class VelibStationComponent implements OnInit {
     });
   }
   ngOnInit() {
+    this.veloService.getStationInformation(this.city, this.stationID).then(res => this.station = res);
   }
 
   reloadStation(){
-    /*this.veloService.getStation(this.city).then(er => {console.log(er);
-      this.stationList = er;});
-    console.log(this.stationList);*/
+    this.veloService.getStationInformation(this.city, this.stationID).then(er => {console.log(er);
+      this.station = er;});
+    console.log(this.station);
   }
 
   return(){
