@@ -21,8 +21,5 @@ namespace IWS
 
         [OperationContract]
         string communicationTest();
-
-        [OperationContract]
-        List<List<string>> getLogs();
     }
 }
