@@ -1,0 +1,10 @@
+<button (click)="getLog()" type="button" class="btn btn-primary">Get Logs</button>
+<button (click)="getNumberOfRequest()" type="button" class="btn btn-primary">Get Number of Request</button>
+<div *ngIf="logs.length">
+  <ul>
+  <li *ngFor="let log of logs">
+    {{ log }}
+  </li>
+</ul>
+</div>
+<p *ngIf="logs.length == 0">Nothing Load (press a Button)</p>

@@ -3,5 +3,6 @@
 </p>
   <button (click)="upgrade()" type="button" class="btn btn-primary">Upgrade</button>
 </div>
-<div *ngIf="user.role == 'admin'"><p>Vous êtes déjà un utilisateur payant</p></div>
+<div *ngIf="user.role == 'admin'"><p>Vous n'êtes pas un utilisateur payant. Voulez vous downgrader?</p>
+  <button (click)="downgrade()" type="button" class="btn btn-primary">Downgrade</button></div>
 <button (click)="return()" type="button" class="btn btn-secondary">Return</button>

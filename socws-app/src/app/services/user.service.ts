@@ -32,7 +32,7 @@ export class UserService {
           firstName: user.firstName,
           lastName: user.lastName,
           username: user.username,
-          role: user.role
+          role: "user"
         });
         return res;
       });

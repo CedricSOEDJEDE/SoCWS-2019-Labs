@@ -19,14 +19,15 @@ export class User {
               lastName: string,
               mail: string,
               username: string,
-              userId: string) {
+              userId: string,
+              role: string) {
     this._firstName = firstName;
     this._lastName = lastName;
     this._mail = mail;
     this._username = username;
     this._userId = userId;
     this._password = '';
-    this._role = 'user';
+    this._role = role;
   }
 
   get role(): string{
@@ -86,7 +87,7 @@ export class User {
   }
 
   static createUser(doc){
-    return new User(doc.firstName, doc.lastName, doc.mail, doc.username, '');
+   return new User(doc.firstName, doc.lastName, doc.mail, doc.username, '', doc.role);
   }
 
   supplyWithFirebaseUser(fUser: firebase.User): void {

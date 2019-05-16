@@ -23,6 +23,11 @@ export class UpgradeComponent implements OnInit {
     this.router.navigate(['/']);
   }
 
+  downgrade(){
+    this.userService.updateRole(this.user, "user");
+    this.router.navigate(['/']);
+  }
+
   return(){
     this.router.navigate(['/']);
   }

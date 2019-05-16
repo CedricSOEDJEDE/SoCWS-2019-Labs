@@ -7,6 +7,7 @@ import {VelibComponent} from "./components/velib-components/velib/velib.componen
 import {VelibCitiesComponent} from "./components/velib-components/velib-cities/velib-cities.component";
 import {VelibStationComponent} from "./components/velib-components/velib-station/velib-station.component";
 import {UpgradeComponent} from "./components/upgrade/upgrade.component";
+import {MonitoringComponent} from "./components/monitoring/monitoring.component";
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -14,7 +15,8 @@ const routes: Routes = [
   {path :'', component: VelibComponent},
   {path:'cities/:city', component: VelibCitiesComponent},
   {path:'stations/:city/:station', component: VelibStationComponent},
-  {path:'upgrade', component: UpgradeComponent}
+  {path:'upgrade', component: UpgradeComponent},
+  {path:'monitoring', component: MonitoringComponent}
 ];
 
 @NgModule({

@@ -4,5 +4,11 @@
     "secure": false,
     "changeOrigin": true,
     "pathRewrite": {"^/Velib/*" : ""}
+  },
+  "/Monitoring/*": {
+    "target": "http://localhost:8732/IWS/JCDECAUX_SOAP/Monitoring",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": {"^/Monitoring/*" : ""}
   }
 }
