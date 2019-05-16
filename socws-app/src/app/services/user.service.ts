@@ -32,7 +32,7 @@ export class UserService {
           firstName: user.firstName,
           lastName: user.lastName,
           username: user.username,
-          role: user.role
+          role: "user"
         });
         return res;
       });
@@ -50,6 +50,12 @@ export class UserService {
       user.supplyWithFirebaseUser(this.getLoggedFirebaseUser());
       this.loggedUser.updateUser(user);
       this.updateLastConnection(user.userId);
+    });
+  }
+
+  updateRole(user: User, role: string) {
+    return this.db.collection('Users').doc(user.userId).update({
+      'role': role
     });
   }
 

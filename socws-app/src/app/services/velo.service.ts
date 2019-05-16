@@ -62,7 +62,7 @@ export class VeloService {
     let listStation: Station[] = [];
 
     for (let i = 0; i < listName.length; i++) {
-      listStation[i] = new Station(listId[i], listName[i], listNumberofBike[i], listNumberofStand[i]);
+      listStation[i] = new Station(listId[i], listName[i], listNumberofBike[i], listNumberofStand[i], '');
     }
 
     return Promise.resolve(listStation);
@@ -77,7 +77,9 @@ export class VeloService {
     const client = await this.client;
     const stationsResponse = (await ((<any>client).getStationInformation(body).toPromise())).result.getStationInformationResult.string;
 
-    let stationresp = new Station(stationsResponse[1], stationsResponse[0], stationsResponse[2], stationsResponse[3]);
+    console.log(stationsResponse);
+
+    let stationresp = new Station(stationsResponse[1], stationsResponse[0], stationsResponse[2], stationsResponse[3], stationsResponse[4]);
 
     return Promise.resolve(stationresp);
   }

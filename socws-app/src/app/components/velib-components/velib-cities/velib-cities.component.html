@@ -3,6 +3,7 @@
 
 <button type="button" class="btn btn-outline-primary" >Nom de la station | Nombre de véols / Nombre d'emplacement</button>
 
+<p *ngIf="stationList.length==0">Loading</p>
 <ul *ngIf="stationList.length">
   <button type="button" class="btn btn-outline-primary" *ngFor="let station of stationList" (click)="goToStation(station.id)">{{ station.name }} | {{station.numberOfBike}}/{{station.numberofStand}}</button>
 </ul>

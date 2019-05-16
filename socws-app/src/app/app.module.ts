@@ -17,6 +17,9 @@ import { RegisterComponent } from './components/register/register.component';
 import { VelibComponent } from './components/velib-components/velib/velib.component';
 import { VelibCitiesComponent } from './components/velib-components/velib-cities/velib-cities.component';
 import { VelibStationComponent } from './components/velib-components/velib-station/velib-station.component';
+import { UpgradeComponent } from './components/upgrade/upgrade.component';
+import { MonitoringComponent } from './components/monitoring/monitoring.component';
+import {MonitoringService} from "./services/monitoring.service";
 
 
 @NgModule({
@@ -26,7 +29,9 @@ import { VelibStationComponent } from './components/velib-components/velib-stati
     RegisterComponent,
     VelibComponent,
     VelibCitiesComponent,
-    VelibStationComponent
+    VelibStationComponent,
+    UpgradeComponent,
+    MonitoringComponent
   ],
   imports: [
     FormsModule,
@@ -41,7 +46,8 @@ import { VelibStationComponent } from './components/velib-components/velib-stati
   providers: [
     UserService,
     AngularFireAuth,
-    VeloService],
+    VeloService,
+    MonitoringService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

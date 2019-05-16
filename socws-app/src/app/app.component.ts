@@ -34,6 +34,10 @@ export class AppComponent {
     });
   }
 
+  upgrade() {
+    this.router.navigate(['/upgrade']);
+  }
+
   disconnect() {
     this.userService.disconnectUser();
   }
