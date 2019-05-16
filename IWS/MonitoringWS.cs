@@ -27,11 +27,17 @@ namespace IWS
         public List<string> getLogsForTwoLastDay()
         {
             Dictionary<DateTime, string> logs = monitor.getMonitor();
-            /*foreach(DateTime date in logs)
+            List<string> twodaysLog = new List<string>();
+            foreach(KeyValuePair<DateTime, string> date in logs)
             {
-
-            }*/
-            return null;
+                //Console.WriteLine(DateTime.Now.AddSeconds(-60));
+                //Console.WriteLine(date.Key);
+                if (date.Key > DateTime.Now.AddSeconds(-10))
+                {
+                    twodaysLog.Add(date.Value);
+                }
+            }
+            return twodaysLog;
         }
     }
 }

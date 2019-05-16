@@ -15,5 +15,8 @@ namespace IWS
 
         [OperationContract]
         int getLogsCount();
+
+        [OperationContract]
+        List<string> getLogsForTwoLastDay();
     }
 }

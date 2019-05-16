@@ -18,3 +18,15 @@ Calvin AUDIER & Mawuyram Frido Cédric SOEDJEDE
 - IWS-Client : Projet console qui contient le code Client pour envoyer les requêtes SOAP au serveur.
 - IWS-Monitoring : Projet bibliothèque qui contient les méthodes pour sauvegarder les requêtes envoyées par le client en enregistrant les paramètres, la méthode appelée et l'heure et date d'appel
 - IWS-Caching : Projet bibliothèque qui contient 2 systèmes de gestion de caches différents, un pour le client et l'autre pour l'administrateur (Dans notre cas l'utilisateur VIP). De base il est mis 30secondes de cache pour faciliter les tests mais ce temps est modifiable grâce à une méthode
+
+## Déploiement
+
+Pour compiler notre projet, il suffit de démarrer le fichier REST-SOAP-LAB.sln à la racine du dossier(Git) puis compiler le projet pour récupérer l'exécutable
+du projet.
+Ordre de lancement du projet : 
+- IWS-Monitoring
+- IWS-Caching
+- IWS
+- IWS-Client
+
+Donc le fichier exécutable obtenu peut être déployé.

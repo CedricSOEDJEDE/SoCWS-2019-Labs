@@ -32,6 +32,7 @@ namespace IWS
 
         public int getAvailableBikes(string contract, string station, string user)
         {
+            DateTime start = DateTime.Now;
             monitor.save("getAvailableBikes", new List<string>() { contract, station });
 
             if (user == "admin")
@@ -50,17 +51,21 @@ namespace IWS
                 dynamic json = JsonConvert.DeserializeObject(responseFromServer);
                 int n = json.available_bikes;
                 caching.updateAvailableBike(contract, station, n);
+                Console.WriteLine("Temps d'exécution : " + (DateTime.Now - start));
                 return n;
             }else
             {
                 Console.WriteLine("From Cache");
+                Console.WriteLine("Temps d'exécution : " + (DateTime.Now - start));
                 return number;
             }
+            
             
         }
 
         public String[] getStationInformation(string contract, string station, string user)
         {
+            DateTime start = DateTime.Now;
             monitor.save("getAvailableBikes", new List<string>() { contract, station });
 
             if (user == "admin")
@@ -79,11 +84,13 @@ namespace IWS
                 dynamic json = JsonConvert.DeserializeObject(responseFromServer);
                 String[] info = { json.name.ToString(), json.number.ToString(), json.available_bikes.ToString(), json.bike_stands.ToString() };
                 caching.updateStationInformation(contract, station, info);
+                Console.WriteLine("Temps d'exécution : " + (DateTime.Now - start));
                 return info;
             }
             else
             {
                 Console.WriteLine("From Cache");
+                Console.WriteLine("Temps d'exécution : " + (DateTime.Now - start));
                 return information;
             }
 
@@ -91,6 +98,7 @@ namespace IWS
 
         public List<string> getContracts(string user)
         {
+            DateTime start = DateTime.Now;
             monitor.save("getContracts", new List<string>());
             if (user == "admin")
                 caching = getCache();
@@ -112,10 +120,12 @@ namespace IWS
                     contracts.Add(cont.name.ToString());
                 }
                 caching.updateContracts(contracts);
+                Console.WriteLine("Temps d'exécution : " + (DateTime.Now - start));
                 return contracts;
             }else
             {
                 Console.WriteLine("From Cache");
+                Console.WriteLine("Temps d'exécution : " + (DateTime.Now - start));
                 return gotContract;
             }
                 
@@ -123,6 +133,7 @@ namespace IWS
 
         public List<string>[] getStations(string contract, string user)
         {
+            DateTime start = DateTime.Now;
             monitor.save("getStations", new List<string>() { contract });
             if (user == "admin")
                 caching = getCache();
@@ -152,10 +163,12 @@ namespace IWS
                 }
                 List<string>[] retour = { stations, numbers, numberofbikes, numberofstands };
                 caching.updateStations(contract, retour);
+                Console.WriteLine("Temps d'exécution : " + (DateTime.Now - start));
                 return retour;
             }else
             {
                 Console.WriteLine("From Cache");
+                Console.WriteLine("Temps d'exécution : " + (DateTime.Now - start));
                 return gotStations;
             }
             

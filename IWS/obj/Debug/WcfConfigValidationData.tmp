@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-<ValidationRecord xmlns="http://schemas.datacontract.org/2004/07/Microsoft.VisualStudio.ServiceModel.Validation" xmlns:i="http://www.w3.org/2001/XMLSchema-instance"><TimeStamps xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays"><a:dateTime>2019-05-15T05:14:45.25026Z</a:dateTime><a:dateTime>2019-05-15T05:39:47.9141641Z</a:dateTime><a:dateTime>2019-03-14T10:12:54.7084128Z</a:dateTime></TimeStamps></ValidationRecord>
-=======
-<ValidationRecord xmlns="http://schemas.datacontract.org/2004/07/Microsoft.VisualStudio.ServiceModel.Validation" xmlns:i="http://www.w3.org/2001/XMLSchema-instance"><TimeStamps xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays"><a:dateTime>2019-05-13T14:33:36.3079938Z</a:dateTime><a:dateTime>2019-05-15T06:20:24.0676269Z</a:dateTime><a:dateTime>2019-05-13T11:14:22.5312343Z</a:dateTime></TimeStamps></ValidationRecord>
->>>>>>> 213c5b2a68b73834370b2a96a241dfc61b6046c7
+<ValidationRecord xmlns="http://schemas.datacontract.org/2004/07/Microsoft.VisualStudio.ServiceModel.Validation" xmlns:i="http://www.w3.org/2001/XMLSchema-instance"><TimeStamps xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays"><a:dateTime>2019-05-15T05:14:45.25026Z</a:dateTime><a:dateTime>2019-05-15T07:31:32.9989875Z</a:dateTime><a:dateTime>2019-03-14T10:12:54.7084128Z</a:dateTime></TimeStamps></ValidationRecord>

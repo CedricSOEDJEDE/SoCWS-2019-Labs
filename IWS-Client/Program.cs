@@ -23,6 +23,8 @@ namespace IWS_Client
                 Console.WriteLine("\t\t2 - Voir les stations pour une ville donnée");
                 Console.WriteLine("\t\t3 - Voir le nombre de vélo disponible");
                 Console.WriteLine("\t\t4 - Voir les logs");
+                Console.WriteLine("\t\t5 - Les logs des 10 dernières seconde");
+                Console.WriteLine("\t\t6 - Tous les logs");
                 Console.WriteLine("\t\t0 - Exit");
                 Console.WriteLine("Ne pas réduire la fenêtre");
                 IClientOperation client = new ClientOperation();
@@ -55,6 +57,20 @@ namespace IWS_Client
                         break;
                     case 4:
                         Console.WriteLine(monitoring.getLogsCount());
+                        Console.ReadKey();
+                        break;
+                    case 5:
+                        foreach(string d in monitoring.getLogsForTwoLastDay())
+                        {
+                            Console.WriteLine(d);
+                        }
+                        Console.ReadKey();
+                        break;
+                    case 6:
+                        foreach (KeyValuePair<DateTime, string> d in monitoring.getLogs())
+                        {
+                            Console.WriteLine(d.Value);
+                        }
                         Console.ReadKey();
                         break;
                 }
