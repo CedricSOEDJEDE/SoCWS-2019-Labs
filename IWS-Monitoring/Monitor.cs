@@ -14,23 +14,22 @@ namespace IWS_Monitoring
 
         public void save(string method, List<string> arguments)
         {
-            List<List<string>> args = new List<List<string>>();
+            Dictionary<DateTime, string> args = new Dictionary<DateTime, string>();
             if (cache.Contains("monitor"))
-                args = (List<List<string>>)cache.Get("monitor");
+                args = (Dictionary<DateTime, string>)cache.Get("monitor");
 
-            args.Add(new List<string>() { DateTime.Now.ToString(),
-                "Appel à la méthode (" + method + ") avec les paramètres (" + arguments.ToString() + ") à " + DateTime.Now.ToString() });
+            args.Add(DateTime.Now, "Appel à la méthode (" + method + ") avec les paramètres (" + arguments.ToString() + ") à " + DateTime.Now.ToString());
 
             CacheItemPolicy cacheItemPolicy = new CacheItemPolicy();
             cacheItemPolicy.AbsoluteExpiration = DateTime.Now.AddDays(days);
             cache.Add("monitor", args, cacheItemPolicy);
         }
 
-        public List<List<string>> getMonitor()
+        public Dictionary<DateTime, string> getMonitor()
         {
-            List<List<string>> args = new List<List<string>>();
+            Dictionary<DateTime, string> args = new Dictionary<DateTime, string>();
             if (cache.Contains("monitor"))
-                args = (List<List<string>>)cache.Get("monitor");
+                args = (Dictionary<DateTime, string>)cache.Get("monitor");
             return args;
         }
     }

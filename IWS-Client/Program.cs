@@ -26,6 +26,7 @@ namespace IWS_Client
                 Console.WriteLine("\t\t0 - Exit");
                 Console.WriteLine("Ne pas réduire la fenêtre");
                 IClientOperation client = new ClientOperation();
+                IMonitoring monitoring = new MonitoringWS();
 
                 while (!Int32.TryParse(Console.ReadLine(), out res))
                 {
@@ -53,7 +54,7 @@ namespace IWS_Client
                         Console.ReadKey();
                         break;
                     case 4:
-                        Console.WriteLine(client.getLogs().Count);
+                        Console.WriteLine(monitoring.getLogsCount());
                         Console.ReadKey();
                         break;
                 }

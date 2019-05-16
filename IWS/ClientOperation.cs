@@ -161,11 +161,6 @@ namespace IWS
             
         }
 
-        public List<List<string>> getLogs()
-        {
-            return monitor.getMonitor();
-        }
-
         public string communicationTest()
         {
             return "Server access";

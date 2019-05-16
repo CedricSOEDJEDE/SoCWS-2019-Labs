@@ -47,7 +47,9 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MonitoringWS.cs" />
     <Compile Include="ClientOperation.cs" />
+    <Compile Include="IMonitoring.cs" />
     <Compile Include="IClientOperation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
