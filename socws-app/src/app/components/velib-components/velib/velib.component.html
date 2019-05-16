@@ -1,4 +1,6 @@
-<ul>
+<h1>Bienvenue sur l'application <kbd>Velibo</kbd></h1>
+<p *ngIf="citiesList.length==0">Loading</p>
+<ul *ngIf="citiesList.length">
   <button type="button" class="btn btn-outline-primary" *ngFor="let city of citiesList" (click)="goToCity(city)">{{ city }}</button>
 </ul>
 <button (click)="reloadCities()" type="button" class="btn btn-primary">Refresh</button>

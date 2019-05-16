@@ -17,6 +17,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { VelibComponent } from './components/velib-components/velib/velib.component';
 import { VelibCitiesComponent } from './components/velib-components/velib-cities/velib-cities.component';
 import { VelibStationComponent } from './components/velib-components/velib-station/velib-station.component';
+import { UpgradeComponent } from './components/upgrade/upgrade.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { VelibStationComponent } from './components/velib-components/velib-stati
     RegisterComponent,
     VelibComponent,
     VelibCitiesComponent,
-    VelibStationComponent
+    VelibStationComponent,
+    UpgradeComponent
   ],
   imports: [
     FormsModule,

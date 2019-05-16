@@ -1,0 +1,7 @@
+<div *ngIf="user.role == 'user'"><p>
+  Vous n'êtes pas un utilisateur payant. Voulez vous upgrader?
+</p>
+  <button (click)="upgrade()" type="button" class="btn btn-primary">Upgrade</button>
+</div>
+<div *ngIf="user.role == 'admin'"><p>Vous êtes déjà un utilisateur payant</p></div>
+<button (click)="return()" type="button" class="btn btn-secondary">Return</button>

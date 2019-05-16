@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">SOCWS</a>
+  <a class="navbar-brand" href="#">Velibo-SOCWS</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -17,10 +17,13 @@
   <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
     <ul class="navbar-nav ml-auto">
       <li *ngIf="isLogged" class="nav-item">
-        <p class="nav-link">Bonjour {{connectedUser.username}}</p>
+        <p class="nav-link">Bonjour {{connectedUser.username}} ({{role}})</p>
       </li>
       <li *ngIf="isLogged" class="nav-item">
-        <button class="nav-link" (click)="disconnect()">Disconnect</button>
+        <button class="btn btn-link" (click)="disconnect()">Disconnect</button>
+      </li>
+      <li *ngIf="isLogged" class="nav-item">
+        <button class="btn btn-link" (click)="upgrade()">Upgrade</button>
       </li>
     </ul>
   </div>

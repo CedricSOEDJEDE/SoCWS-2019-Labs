@@ -14,6 +14,7 @@ export class AppComponent {
 
   currentRoute: string;
   isLogged = false;
+  role: string;
 
   constructor(private veloService: VeloService, private userService: UserService, private router: Router) {
     this.currentRoute = '';
@@ -32,6 +33,14 @@ export class AppComponent {
         this.router.navigate(['/']);
       }
     });
+    if(this.isLogged){
+      this.role = this.connectedUser.role;
+      console.log("role");
+    }
+  }
+
+  upgrade() {
+    this.router.navigate(['/upgrade']);
   }
 
   disconnect() {

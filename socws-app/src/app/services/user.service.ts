@@ -53,6 +53,12 @@ export class UserService {
     });
   }
 
+  updateRole(user: User, role: string) {
+    return this.db.collection('Users').doc(user.userId).update({
+      'role': role
+    });
+  }
+
   private updateLastConnection(userId: string) {
     const timestamp = firebase.firestore.FieldValue.serverTimestamp();
     this.db.collection('Users').doc(userId).update({
